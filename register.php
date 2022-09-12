@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <title>Registration Form</title>
 </head>
 <body>
-    <div class="header">
-        
-    </div>
-    <div class="container">   
-    <h1>Registration Form</h1>     
-        <form method="POST" enctype="multipart/form-data" action="form-handler.php">
-                <label for="complete_name">Complete Name</label>
-                <input type="text" id="complete_name" name="complete_name" placeholder="Complete Name" required><br>
 
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="email@example.com" required><br>
-
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data" action="upload-handler.php">
+            <h1><b>Registration Form</b></h1>
+            
+                <label for="compname">Complete Name</label>
+                <input type="text" class="form-control" name="compname" placeholder="John Doe" required="required">
+                 
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" placeholder="doe.john@student.auf.edu.ph" required="required">
+                     
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Password" required><br>
-
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" placeholder="Confirm Password" required><br>
-
-                <label for="input_file">Choose File</label>
-                <input type="file" id="input_file" name="input_file" required><br>
-
-                <button type="submit">Submit Registration</button>
-
+                <input type="password" class="form-control" name="password" placeholder="********" required="required">
+        
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" class="form-control" name="confirm_password" placeholder="********" required="required">
+             
+                <label for="fileSelect">Picture</label>
+                <input type="file" name="fileSelect" id="fileSelect" class="form-control" required><br>
+            
+            <div class ="text-center">
+            <button type="submit" class="btn-default">Submit Registration</button>
             </div>
         </form>
     </div>
+
 </body>
 </html>

@@ -1,8 +1,6 @@
 <?php
 Class Retrieve{
-
     public function __construct(){
-        
     }
 
     public function retrieveData(){
@@ -15,8 +13,7 @@ Class Retrieve{
 			$statement = $pdo->prepare($sql);
 			$statement->execute();
             return $statement->fetchAll();
-
-		} catch (Exception $e) {
+		}catch (Exception $e){
 			error_log($e->getMessage());
 		}
     }
